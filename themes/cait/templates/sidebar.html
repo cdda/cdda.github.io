@@ -1,0 +1,54 @@
+<header id="sidebar" class="side-shadow">
+    <hgroup id="site-header">
+      <a id="site-title" href="/">
+        <h1>Cataclysm:<br />Dark Days Ahead</h1>
+        <h2>{{ SITENAME }}</h2></a>
+        <p id="site-desc">{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</p>
+    </hgroup>
+    <nav>
+        <ul id="nav-links">
+          <li>
+            <div>
+              <a href="/self">
+              <img src="/theme/icons/self.png" width="32" />
+                Yourself
+              </a>
+              </div>
+          </li>
+          <li>
+            <div>
+              <a href="/combat">
+              <img src="/theme/icons/combat.png" width="32" />
+                Combat
+              </a>
+              </div>
+          </li>
+          <li>
+            <div>
+              <a href="/industry">
+              <img src="/theme/icons/industry.png" width="32" />
+                Industry
+              </a>
+              </div>
+          </li>
+          <li>
+            <div>
+              <a href="/world">
+              <img src="/theme/icons/world.png" width="32" />
+                The World
+              </a>
+              </div>
+          </li>
+            {% if USE_CUSTOM_MENU %}
+            {% for name, url in CUSTOM_MENUITEMS %}
+                <li><a href="{{ SITEURL }}/{{ url }}">{{ name }}</a></li>
+            {% endfor %}
+            {% else %}
+            {% for page in PAGES %}
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </nav>
+    {% include "footer.html" %}
+</header>

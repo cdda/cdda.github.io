@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/blog.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/github.css">
+{% endblock stylesheets %}
+
+{% block content %}
+    {% include "sidebar.html" %}
+
+    <div id="post-container">
+        <ol id="post-list">
+            {% for article in articles_page.object_list %}
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="{{ article.date.isoformat() }}" pubdate>
+                            {{ article.locale_date }}
+                        </time>
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"><h1>{{ article.title }}</h1></a>
+                    </header>
+                    <section class="post-content">
+                        {{ article.summary }}
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock content %}
