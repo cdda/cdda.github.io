@@ -3,10 +3,11 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Survivors'
-SITENAME = u'Codex Apocalyptica'
+SITENAME = u'The Codex Apocalyptica'
 SITEURL = ''
 
 PATH = 'content'
+PAGE_PATHS = ['pages']
 
 TIMEZONE = 'America/Los_Angeles'
 
