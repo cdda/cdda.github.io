@@ -58,6 +58,7 @@ body {
   #nav-links li {
     margin: 12px 12px; }
   #nav-links a {
+    width: 80%;
     padding: 0 24px;
     border-radius: 24px;
     display: inline-block;
@@ -71,6 +72,9 @@ body {
   #nav-links a:hover {
     border-color: #e36d73;
     color: #e36d73; }
+  #nav-links img {
+    padding-left: 10%;
+    padding-right: 10%; }
 
 #post-list {
   list-style: none; }
