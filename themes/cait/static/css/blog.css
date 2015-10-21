@@ -10,6 +10,9 @@ body {
   font-family: "Lato", sans-serif; }
 
 #sidebar {
+  background-image: url(/theme/img/leather.jpg);
+  background-size: 100% 100%;
+  background-repeat-x: no-repeat;
   background-color: #272822;
   position: fixed;
   left: 0;
@@ -22,8 +25,9 @@ body {
   padding-right: 8px;
   color: #EEEEEE; }
   #sidebar a {
-    color: #EEEEEE;
-    text-decoration: none; }
+    color: lightgrey;
+    text-decoration: none;
+    text-shadow: 1px 4px 6px black, 0 0 0 #000, 1px 4px 6px black; }
 
 #site-title {
   text-align: center;
