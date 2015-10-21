@@ -89,7 +89,8 @@ body {
   #post-container a:hover {
     color: #E66A6A; }
   #post-container img {
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0px 0px 10px black; }
 
 #nav-links {
   list-style: none;
