@@ -91,6 +91,13 @@ body {
   #post-container img {
     width: 100%;
     box-shadow: 0px 0px 10px black; }
+  #post-container code {
+    font-family: monospace;
+    background: #444444;
+    border-radius: 5px;
+    color: white;
+    padding: 0em .2em;
+    display: inline-block; }
 
 #nav-links {
   list-style: none;
