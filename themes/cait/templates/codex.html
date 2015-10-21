@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/blog.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/github.css">
+{% endblock stylesheets %}
+
+{% block content %}
+    {% include "sidebar.html" %}
+    <div class="codex">
+      <div class="codex_title">
+        {% block section_name %}{% endblock section_name %}
+      </div>
+      <div class="codex_content">
+        {{ page.content }}
+      </div>
+    </div>
+{% endblock content %}

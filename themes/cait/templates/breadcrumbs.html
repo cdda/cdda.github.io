@@ -1,0 +1,9 @@
+<div id="breadcrumbs">
+  <ul>
+    <li><a href="{{ SITEURL }}/">Codex</a></li>
+    {% for parent in page.parents %}
+    <li><a href="{{ SITEURL }}/{{ parent.url }}">{{ parent.title }}</a></li>
+    {% endfor %}
+    <li class="active">{{ page.title }}</li>
+  </ul>
+</div>
